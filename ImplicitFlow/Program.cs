@@ -14,14 +14,10 @@ builder.Services.AddAuthentication(options =>
 .AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, options =>
 {
     options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.Authority = "https://login.microsoftonline.com/68541e69-558b-4b25-867f-53677daea3e9/v2.0";
-    options.ClientId = "42ac7c97-0718-420c-a403-a4fcd464afc7";
-    // specific to implicit flow
-    //options.ResponseType = "id_token";
-    options.ResponseType = "code";
+    options.Authority = "https://login.microsoftonline.com/<tenant_id>/v2.0";
+    options.ClientId = "Cliemt_Id";
+    options.ResponseType = "id_token";
     options.SaveTokens = true;
-    // specific to AuthCode flow
-    options.ClientSecret = "hB28Q~CLnkYSO~DogpdGL_1w~gXvtKuKWs6OAaHu";
 });
 
 var app = builder.Build();
