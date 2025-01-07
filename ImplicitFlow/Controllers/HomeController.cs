@@ -30,13 +30,22 @@ namespace ImplicitFlow.Controllers
 
         public IActionResult SignIn()
         {
-            var schema = OpenIdConnectDefaults.AuthenticationScheme;
-            var redirectUrl = Url.ActionContext.HttpContext.Request.Scheme +
-                "://" + Url.ActionContext.HttpContext.Request.Host;
-            return Challenge(new AuthenticationProperties
+            try
             {
-                RedirectUri = redirectUrl
-            }, schema);
+                var schema = OpenIdConnectDefaults.AuthenticationScheme;
+                var redirectUrl = Url.ActionContext.HttpContext.Request.Scheme +
+                    "://" + Url.ActionContext.HttpContext.Request.Host;
+                return Challenge(new AuthenticationProperties
+                {
+                    RedirectUri = redirectUrl
+                }, schema);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.ToString());
+            }
+
         }
         public IActionResult SignOut()
         {
