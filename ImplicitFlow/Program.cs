@@ -16,8 +16,12 @@ builder.Services.AddAuthentication(options =>
     options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.Authority = "https://login.microsoftonline.com/<tenant_id>/v2.0";
     options.ClientId = "Cliemt_Id";
-    options.ResponseType = "id_token";
+    // specific to implicit flow
+    //options.ResponseType = "id_token";
+    options.ResponseType = "code";
     options.SaveTokens = true;
+    // specific to AuthCode
+    options.ClientSecret = "client_secret";
 });
 
 var app = builder.Build();
