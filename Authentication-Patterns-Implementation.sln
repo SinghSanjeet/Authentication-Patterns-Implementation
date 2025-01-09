@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplicitFlow", "ImplicitFlow\ImplicitFlow.csproj", "{878447CB-B7D9-4290-A0ED-D0829FCA658A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{81F672FC-8417-49DE-A25B-6C000E95F674}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{878447CB-B7D9-4290-A0ED-D0829FCA658A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{878447CB-B7D9-4290-A0ED-D0829FCA658A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{878447CB-B7D9-4290-A0ED-D0829FCA658A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81F672FC-8417-49DE-A25B-6C000E95F674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81F672FC-8417-49DE-A25B-6C000E95F674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81F672FC-8417-49DE-A25B-6C000E95F674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81F672FC-8417-49DE-A25B-6C000E95F674}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
