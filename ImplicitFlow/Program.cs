@@ -15,15 +15,15 @@ builder.Services.AddAuthentication(options =>
 .AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, options =>
 {
     options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.Authority = "https://login.microsoftonline.com/68541e69-558b-4b25-867f-53677daea3e9/v2.0";
-    options.ClientId = "42ac7c97-0718-420c-a403-a4fcd464afc7";
+    options.Authority = "authority";
+    options.ClientId = "clientid";
     // specific to implicit flow
     //options.ResponseType = "id_token";
     options.ResponseType = "code";
     options.SaveTokens = true;
-    options.Scope.Add("api://5bfb5f84-d2e8-4484-8746-da77d051e7dc/AdminAccess");
+    options.Scope.Add("scope");
     // specific to AuthCode
-    options.ClientSecret = "pfI8Q~n5mdN4W3d~Ije92G06DB_NmUzkTqH76bUE";
+    options.ClientSecret = "clientsecret";
 });
 
 var app = builder.Build();
